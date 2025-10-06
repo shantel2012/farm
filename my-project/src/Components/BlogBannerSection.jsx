@@ -1,23 +1,26 @@
 import React from 'react';
+import mom from '../assets/mom.jpg';
+import no from '../assets/no.jpg';
+import cow from '../assets/cow.jpg';
 
 const blogPosts = [
   {
     id: 1,
     title: "How to Grow Organic Vegetables",
     excerpt: "Learn best practices and tips for growing healthy organic vegetables in your garden.",
-    imageUrl: "/images/blog1.jpg",
+    imageUrl: mom,
   },
   {
     id: 2,
     title: "Sustainable Farming Methods",
     excerpt: "Explore methods that protect the soil and environment while maximizing yield.",
-    imageUrl: "/images/blog2.jpg",
+    imageUrl: no,
   },
   {
     id: 3,
     title: "Crop Rotation Explained",
     excerpt: "Understand why rotating crops matters and how to plan your fields.",
-    imageUrl: "/images/blog3.jpg",
+    imageUrl: cow,
   },
 ];
 

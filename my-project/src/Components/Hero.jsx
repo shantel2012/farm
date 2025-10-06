@@ -1,71 +1,110 @@
 // import React from "react";
-// import { FaSearch, FaPhoneAlt } from "react-icons/fa";
 // import { FaArrowRight } from "react-icons/fa";
 // import { Search } from "lucide-react";
-// import hero from "../assets/hero.jpg"; // Keep your background image
+// import { Link } from "react-router-dom";
+// import hero from "../assets/hero.jpg";
 
-// export default function LandingPage() {
+// export default function Hero() {
 //   return (
-//     <div className="relative w-full h-screen overflow-hidden">
+//     <div className="relative mt-4 w-full min-h-[70vh] overflow-hidden rounded-3xl md:h-[80vh] m-[15px]">
 //       {/* Background */}
 //       <div className="absolute inset-0">
-//         <img
-//           src={hero}
-//           alt="Farm background"
-//           className="w-full h-full object-cover"
-//         />
-//         <div className="absolute inset-0 bg-grey bg-opacity-40"></div>
+//         <img src={hero} alt="Farm background" className="h-full w-full object-cover" />
+//         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/50" />
 //       </div>
-//       <div className="absolute top-0 right-0 w-[200px] h-[100px] bg-[#f7f7ed] rounded-bl-[50px]"></div>
-
-//       {/* Content */}
-//       <div className="relative z-5 max-w-2xl mx-auto py-23 px-3 text-center"></div>
+//       <div className="absolute top-0 right-0 h-[110px] w-[220px] rounded-bl-[56px] bg-[#f7f7ed]" />
 
 //       {/* Navbar */}
-//       <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-white z-20">
-//         {/* Placeholder Logo */}
+//       <nav className="absolute left-0 top-0 z-20 flex w-full items-center justify-between px-6 py-6 text-white md:px-10">
+//         {/* Logo */}
 //         <div className="flex items-center gap-2 text-2xl font-bold">
-//           {/* You can later replace with a real logo image */}
-//          <span className="text-green-500">🌿</span> Agrimo
+//           <span className="text-green-500">🌿</span> Agrimo
 //         </div>
 
-//         <ul className="hidden md:flex gap-8 font-medium">
-//           <li className="flex items-center gap-2 cursor-pointer text-[#EDDD5E]">HOME</li>
-//           <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">About</li>
-//           <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">SERVICES</li>
-//           <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">PORTFOLIO</li>
-//           <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">BLOG</li>
-//           <li className="flex items-center gap-2 cursor-pointer hover:text-green-400">CONTACT US</li>
+//         <ul className="hidden gap-8 font-medium md:flex">
+//           <li>
+//             <Link to="/" className="flex items-center gap-2 text-[#EDDD5E] hover:text-yellow-400">
+//               HOME
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/about" className="flex items-center gap-2 hover:text-yellow-400">
+//               ABOUT
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/services" className="flex items-center gap-2 hover:text-yellow-400">
+//               SERVICES
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/portfolio" className="flex items-center gap-2 hover:text-yellow-400">
+//               PORTFOLIO
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/product" className="flex items-center gap-2 hover:text-yellow-400">
+//               PRODUCT
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/team" className="flex items-center gap-2 hover:text-yellow-400">
+//               TEAM
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/blog" className="flex items-center gap-2 hover:text-yellow-400">
+//               BLOG
+//             </Link>
+//           </li>
+//           <li>
+//             <Link to="/contact" className="flex items-center gap-2 hover:text-yellow-400">
+//               CONTACT US
+//             </Link>
+//           </li>
 //         </ul>
 
+//         <div className="hidden text-right leading-tight md:block">
+//           <div className="text-[11px] text-green-100">Call us Now</div>
+//           <div className="text-sm font-semibold text-white">+1(212)255-511</div>
+//         </div>
+
 //         {/* Right section */}
-//         <div className="flex items-center gap-8">
-//           <div className="flex items-center gap-2 text-sm">
-// //             <FaPhoneAlt /> <span>Call Us Now<br />+ (412) 215-4511</span>
-// //           </div>
-//           <Search className="w-4 h-4 cursor-pointer hover:text-green-400 gap-8" />
-//           <button className="bg-yellow-300 text-black rounded-full px-6 py-2 shadow-md hover:bg-yellow-400 transition">
+//         <div className="flex items-center gap-6">
+//           <Search className="h-4 w-4 cursor-pointer hover:text-green-400" />
+//           <button className="flex items-center gap-2 rounded-full bg-yellow-300 px-6 py-2 text-black shadow-md transition hover:bg-yellow-400">
 //             Get In Touch
 //           </button>
 //         </div>
 //       </nav>
 
-//       {/* Content */}
-//       <div className="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24 text-white">
-//         <button className="px-4 py-2 border border-white rounded-full text-xs uppercase tracking-wide mb-4 hover:bg-white hover:text-black transition">
-//           Believe in Quality!
-//         </button>
+//       {/* Hero Content */}
+//       <div className="relative z-10 flex h-full flex-col items-start justify-center px-6 text-white md:px-16">
+//         <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/10 px-4 py-1.5 text-xs font-semibold backdrop-blur-sm">
+//           BELIEVE IN QUALITY
+//         </span>
 
-//         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
-//           Quality Trust: <br /> Direct to the Farm
-//         </h1>
+//         {/* Heading */}
+        
+//          <div className="mt-4 inline-block rounded-xl border-2 border-yellow-300/80 px-4 py-2 backdrop-blur-sm">
+//           <h1 className="text-5xl font-extrabold leading-tight drop-shadow-[0_2px_2px_RGBA(0,0,0,0.25)] md:text-7xl">
+//             Quality Trust:
+//             <br />
+//             Direct to the Farm
+//           </h1>
+//         </div>
 
-//         <p className="text-lg max-w-xl mb-6">
+//         {/* Decorative line under heading */}
+//         <div className="mt-3 w-97 h-1 bg-white-400 rounded"></div>
+
+//         {/* Subtitle */}
+//         <p className="mt-4 mb-5 max-w-xl text-base text-white/90 md:text-lg">
 //           We all need a little space to grow. Give yourself the space you need to find your inner you.
 //         </p>
 
-//         <button className="bg-white text-black rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition">
-//           Contact Us<FaArrowRight />
+//         {/* CTA Button */}
+//         <button className="flex items-center gap-2 rounded-full bg-white px-6 py-3 text-black shadow-md transition hover:bg-gray-200">
+//           Contact Us <FaArrowRight />
 //         </button>
 //       </div>
 //     </div>
@@ -76,95 +115,97 @@
 import React from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { Search } from "lucide-react";
-import { Link } from "react-router-dom"; // <-- import Link
+import { Link } from "react-router-dom";
 import hero from "../assets/hero.jpg";
 
-export default function LandingPage() {
+export default function Hero() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative m-[15px] h-[100vh] w-[calc(100%-30px)] overflow-hidden rounded-3xl">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
-          src={hero}
-          alt="Farm background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-grey bg-opacity-40"></div>
+        <img src={hero} alt="Farm background" className="h-full w-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/50" />
       </div>
-      <div className="absolute top-0 right-0 w-[200px] h-[100px] bg-[#f7f7ed] rounded-bl-[50px]"></div>
+      <div className="absolute top-0 right-0 h-[110px] w-[220px] rounded-bl-[56px] bg-[#f7f7ed]" />
 
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 text-white z-20">
+      <nav className="absolute left-0 top-0 z-20 flex w-full items-center justify-between px-6 py-6 text-white md:px-10">
         {/* Logo */}
         <div className="flex items-center gap-2 text-2xl font-bold">
           <span className="text-green-500">🌿</span> Agrimo
         </div>
 
-        <ul className="hidden md:flex gap-8 font-medium">
-          <li>
-            <Link to="/" className="flex items-center gap-2 text-[#EDDD5E] hover:text-yellow-400">
-              HOME
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="flex items-center gap-2 hover:text-yellow-400">
-              ABOUT
-            </Link>
-          </li>
-          <li>
-            <Link to="/services" className="flex items-center gap-2 hover:text-yellow-400">
-              SERVICES
-            </Link>
-          </li>
-          <li>
-            <Link to="/portfolio" className="flex items-center gap-2 hover:text-yellow-400">
-              PORTFOLIO
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog" className="flex items-center gap-2 hover:text-yellow-400">
-              BLOG
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="flex items-center gap-2 hover:text-yellow-400">
-              CONTACT US
-            </Link>
-          </li>
+        {/* Menu */}
+        <ul className="hidden gap-8 font-medium md:flex">
+          {[
+            { name: "HOME", link: "/", highlight: true },
+            { name: "ABOUT", link: "/about" },
+            { name: "SERVICES", link: "/services" },
+            { name: "PORTFOLIO", link: "/portfolio" },
+            { name: "PRODUCT", link: "/product" },
+            { name: "TEAM", link: "/team" },
+            { name: "BLOG", link: "/blog" },
+            { name: "CONTACT US", link: "/contact" },
+          ].map((item, idx) => (
+            <li key={idx} className="flex items-center gap-2">
+              {/* Small yellow dot */}
+              <span className="h-2 w-2 rounded-full bg-yellow-400"></span>
+              <Link
+                to={item.link}
+                className={`hover:text-yellow-400 ${
+                  item.highlight ? "text-[#EDDD5E]" : ""
+                }`}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
         </ul>
-        
-        <div className="leading-tight">
-            <div className="text-[11px] text-green-100">Call us Now</div>
-            <div className="text-sm font-semibold text-white">+1(212)255-511</div>
-         </div>
+
+        {/* Phone Info */}
+        <div className="hidden text-right leading-tight md:block">
+          <div className="text-[11px] text-green-100">Call us Now</div>
+          <div className="text-sm font-semibold text-white">+1(212)255-511</div>
+        </div>
 
         {/* Right section */}
-        <div className="flex items-center gap-8">
-          <Search className="w-4 h-4 cursor-pointer hover:text-green-400" />
-          <button className="bg-yellow-300 text-black rounded-full px-6 py-2 shadow-md hover:bg-yellow-400 transition">
+        <div className="flex items-center gap-6">
+          <Search className="h-4 w-4 cursor-pointer hover:text-green-400" />
+          <button className="flex items-center gap-2 rounded-full bg-yellow-300 px-6 py-2 text-black shadow-md transition hover:bg-yellow-400">
             Get In Touch
           </button>
         </div>
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex flex-col justify-center items-start h-full px-10 md:px-24 text-white">
-        <button className="px-4 py-2 border border-white rounded-full text-xs uppercase tracking-wide mb-4 hover:bg-white hover:text-black transition">
-          Believe in Quality!
-        </button>
+      <div className="relative z-10 flex h-full flex-col items-start justify-center px-6 text-white md:px-16">
+        {/* Badge */}
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/10 px-4 py-1.5 text-xs font-semibold backdrop-blur-sm">
+          BELIEVE IN QUALITY
+        </span>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
-          Quality Trust: <br /> Direct to the Farm
+        {/* Heading */}
+        <h1 className="mt-4 text-5xl font-extrabold leading-tight drop-shadow-[0_2px_2px_RGBA(0,0,0,0.25)] md:text-7xl">
+          Quality Trust:
+          <br />
+          Direct to the Farm
         </h1>
 
-        <p className="text-lg max-w-xl mb-6">
+        {/* White line under heading */}
+        <div className="mt-3 h-1 w-28 rounded bg-white"></div>
+
+        {/* Subtitle */}
+        <p className="mt-4 mb-5 max-w-xl text-base text-white/90 md:text-lg">
           We all need a little space to grow. Give yourself the space you need to find your inner you.
         </p>
 
-        <button className="bg-white text-black rounded-full px-6 py-3 shadow-md hover:bg-gray-200 transition flex items-center gap-2">
+        {/* CTA Button (outlined) */}
+        <button className="flex items-center gap-2 rounded-full border border-white bg-white px-6 py-3 text-black transition hover:bg-white/10">
           Contact Us <FaArrowRight />
         </button>
       </div>
     </div>
   );
 }
+
+

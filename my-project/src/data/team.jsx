@@ -3,7 +3,7 @@ import imgMichael from '../assets/boy.png';
 import imgSophia from '../assets/track.png';
 import imgDavid from '../assets/farm.jpg';
 import imgLinda from '../assets/crop.jpg';
-import imgOmar from '../assets/cv.jpg';
+import imgOmar from '../assets/img.jpg';
 export const teamMembers = [
   {
     id: 'anna-smith',

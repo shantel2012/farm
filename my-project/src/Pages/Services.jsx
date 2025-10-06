@@ -3,12 +3,20 @@ import React from 'react'
 import Hero from '../Components/Services/Hero'
 import ServicesGrid from '../Components/Services/ServicesGrid'
 // import Footer from '../components/Footer'
+import heroBg from '../assets/hero.jpg'
 
 export default function Services() {
   return (
     <>
       {/* <Navbar /> */}
-      <Hero bg="/about.jpg" badge="Services" titleLine1="Services" titleLine2="" subtitle="" ctaLabel="" />
+      <Hero
+        bg={heroBg}
+        badge="Home • Services"
+        titleLine1="Services"
+        titleLine2=""
+        subtitle="Quality agriculture, eco solutions, and organic products"
+        ctaLabel=""
+      />
       <ServicesGrid />
       {/* <Footer /> */}
     </>

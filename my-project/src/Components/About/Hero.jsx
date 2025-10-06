@@ -1,66 +1,68 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link for routing
+import { Phone } from "lucide-react";
+import bgImage from "../../assets/img.jpg"; // replace with your actual image path
 
-export default function Hero() {
+export default function AboutHero() {
   return (
-    <section
-      className="relative h-[400px] bg-cover bg-center"
-      style={{
-        backgroundImage:
-          "linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-      }}
-    >
+    <div className="relative w-full h-[90vh] font-poppins overflow-hidden rounded-2xl">
+      {/* Background Image */}
+      <img
+        src={bgImage}
+        alt="Farmer with tomatoes"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+
       {/* Navbar */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-10 py-6 z-20 text-white">
-        <div className="flex items-center gap-2 text-2xl font-bold">
-          <span className="text-green-500">🌿</span> Agrimo
+      <nav className="absolute top-0 left-0 w-full flex items-center justify-between px-10 py-4 z-20">
+        {/* Logo */}
+        <div className="flex items-center space-x-2">
+          <img
+            src="/logo.png" // replace with your logo
+            alt="Agrimo Logo"
+            className="w-10 h-10 object-contain"
+          />
+          <h1 className="text-white text-2xl font-bold">Agrimo</h1>
         </div>
 
-        <ul className="hidden md:flex gap-8 font-medium">
-          <li>
-            <Link to="/" className="flex items-center gap-2 text-[#EDDD5E] hover:text-yellow-400">
-              HOME
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="flex items-center gap-2 hover:text-yellow-400">
-              ABOUT
-            </Link>
-          </li>
-          <li>
-            <Link to="/services" className="flex items-center gap-2 hover:text-yellow-400">
-              SERVICES
-            </Link>
-          </li>
-          <li>
-            <Link to="/portfolio" className="flex items-center gap-2 hover:text-yellow-400">
-              PORTFOLIO
-            </Link>
-          </li>
-          <li>
-            <Link to="/blog" className="flex items-center gap-2 hover:text-yellow-400">
-              BLOG
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="flex items-center gap-2 hover:text-yellow-400">
-              CONTACT US
-            </Link>
-          </li>
+        {/* Menu Links */}
+        <ul className="hidden md:flex items-center space-x-6 text-white text-sm font-medium">
+          <li className="hover:text-yellow-400 cursor-pointer">Home</li>
+          <li className="hover:text-yellow-400 cursor-pointer">About</li>
+          <li className="hover:text-yellow-400 cursor-pointer">Services</li>
+          <li className="hover:text-yellow-400 cursor-pointer">Portfolio</li>
+          <li className="hover:text-yellow-400 cursor-pointer">Blog</li>
+          <li className="hover:text-yellow-400 cursor-pointer">Contact Us</li>
         </ul>
+
+        {/* Contact Info + Button */}
+        <div className="hidden md:flex items-center space-x-5">
+          <div className="flex items-center space-x-2 text-white">
+            <div className="bg-yellow-400/20 p-2 rounded-full">
+              <Phone size={16} className="text-yellow-400" />
+            </div>
+            <div className="leading-tight">
+              <p className="text-xs">Call us now</p>
+              <p className="text-sm font-semibold">+263 456 891 45</p>
+            </div>
+          </div>
+          <button className="bg-yellow-400 text-black px-5 py-2 rounded-full font-semibold hover:bg-yellow-500 transition">
+            Get In Touch
+          </button>
+        </div>
       </nav>
 
       {/* Hero Content */}
-      <div className="container mx-auto px-6 h-full flex items-center relative z-10">
-        <div className="text-white">
-          <h1 className="text-5xl font-bold mb-2">About Us</h1>
-          <p className="text-lg">
-            We're impartial and independent, and every day we create distinctive,
-            <br />
-            world-class programmes and content
-          </p>
+      <div className="absolute inset-0 flex flex-col justify-center pl-16 text-white z-10">
+        <h1 className="text-5xl font-bold mb-3">About Us</h1>
+        <div className="flex items-center text-sm">
+          <span className="hover:text-yellow-400 cursor-pointer">AGRIMO</span>
+          <span className="mx-2 text-yellow-400">›</span>
+          <span>ABOUT US</span>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
